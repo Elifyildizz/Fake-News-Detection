@@ -47,11 +47,41 @@ Analyzes made on the data sets, unnecessary information was cleared. Inconsisten
 # Data Pre-Process
 This section details the feature engineering steps used to feed the dataset into machine learning models.
 Before training Machine Learning models, separated the last 1000 data of the dataset to later test the best performing model with new data.
+
 # Model Selection
 Supervised Learning involves training a model on a labeled dataset, where the algorithm learns from input-output pairs to make predictions or classifications on new, unseen data. The primary rationale behind model selection was to leverage the existing label information in dataset, leads to prefer classification and prediction models.
 Trained various machine learning models, including Logistic Regression, Decision Tree Classifier, Random Forest Classifier, and Naive Bayes.
 
 1) **Logistic Regression**: Logistic Regression is a statistical method that is based on a linear model to classify the dependent variable and is used especially for two-class problems.
+
+  ![image](https://github.com/user-attachments/assets/89d5733f-d7f9-4c58-aaef-5e09debf903d)
+  ![image](https://github.com/user-attachments/assets/937bd1ed-fa0e-46e7-8d31-ad94960fbb12)
+  
+  The ROC curve evaluates a model's performance by plotting the true positive rate (sensitivity) against the false positive rate, with 97.61% area under the curve (AUC) indicating better classification ability.
+
 2) **Decision Tree Classifier**: Decision Tree Classifier is an algorithm that creates decision rules by dividing the data into branches and performs classification tasks in a visualizable way.
+   
+  ![image](https://github.com/user-attachments/assets/113db32e-0150-4ebc-810e-e698daf11c74)
+  ![image](https://github.com/user-attachments/assets/a07111ad-57c5-478c-b408-e55efb429e10)
+
+  The ROC curve suggests that the model's performance is worst than logistic regression by plotting the true positive rate (sensitivity) against the false positive rate, with 92.44% area under the curve (AUC).
+
 3) **Random Forest Classifier**: Random Forest Classifier is an ensemble learning method created by combining multiple decision trees and aims to increase classification accuracy.
+   
+  ![image](https://github.com/user-attachments/assets/9299d5ca-3c41-4456-862f-4cdc99ee8b29)
+  ![image](https://github.com/user-attachments/assets/214f1068-29ef-43af-bc51-044b6c73b8a6)
+  
+  The ROC curve suggests that the model's performance is worst than logistic regression by plotting the true positive rate (sensitivity) against the false positive rate, with 97.45% area under the curve (AUC).
+
 4) **Naive Bayes**: Naive Bayes is a probabilistic classifier that assumes that events are independent of each other and provides fast and effective results, especially in tasks such as text classification.
+  ![image](https://github.com/user-attachments/assets/43c38fe6-e4a8-42bc-b84d-313c4edaf580)
+  ![image](https://github.com/user-attachments/assets/d77c8fc5-5baa-41b8-bd9e-1ce94dfff5c8)
+
+  The ROC curve suggests that the model's performance is worst than logistic regression by plotting the true positive rate (sensitivity) against the false positive rate, with 93.14% area under the curve (AUC).
+
+![image](https://github.com/user-attachments/assets/796c01a3-82cc-4cbd-91d9-e1ada3420777)
+![image](https://github.com/user-attachments/assets/10c67ec7-9606-4b21-9f9b-40ce2b55b4f8)
+![image](https://github.com/user-attachments/assets/de49840c-0dd9-4ae9-83e6-3def7462d4e2)
+![image](https://github.com/user-attachments/assets/c7d197bd-96d7-46f8-bcb7-60bbbc455841)
+
+Except precision plot, all plot show us the best model is LR. Since the aim of the research is discrimination of fake and true news, the model is selected by accuracy metric.
